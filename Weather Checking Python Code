@@ -1,0 +1,10 @@
+Get Real-Time Weather Updates with Just a Few Lines of Code! 🌦️
+
+This lightweight Python script allows you to fetch real-time weather data for any location worldwide. Perfect for IoT projects, smart home systems, travel apps, or automation scripts, this tool connects to a weather API (like OpenWeatherMap) and returns key details such as temperature, humidity, wind speed, and forecasts.
+import requests
+city = input("Enter the city name: ")
+print(city)
+url='https://wttr.in/{}'.format(city)
+req=requests.get(url)
+print('Displying Weather Reports for' + city)
+print(req.text)
